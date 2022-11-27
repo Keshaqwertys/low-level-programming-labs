@@ -1,0 +1,93 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[ТЗ: Циклический сдвиг массива чисел на заданное количество разрядов вправо]
+[Ответ записывается в ячейки: 87 88 89 90 91]
+T92S                 [конец в 92 ячейке]
+X0S
+T0S                  [acc = 0]
+A86S                 [start num]
+T81S                 [index = start num; acc = 0]
+A84S                 [range]
+T85S                 [current size = range; acc = 0]
+T0S                  [acc = 0]                                      [START LOOP]
+A82S                 [current element]
+T83S                 [prev element = current element; acc = 0]
+A81S                 [index]
+L0L                  [cдвигаем влево значение в acc]
+A77S                 [записываем функцию в acc]
+T45S                 [записываем функцию в ячейку; acc = 0]
+A0S                  [записываем значение функции в acc]
+T82S                 [записываем значение функции в current element; acc = 0]
+A81S                 [index]
+L0L                  [cдвигаем влево значение в acc]
+A78S                 [записываем функцию в acc]
+T52S                 [записываем функцию в ячейку; acc = 0]
+A83S                 [записали prev element в acc]
+T0S                  [переписали значение в массиве на prev element; acc = 0]
+A81S                 [index]
+A79S                 [index + 1]
+T81S                 [index = index + 1; acc = 0]
+A85S                 [current size]
+S79S                 [current size - 1]
+U85S                 [current size = current size - 1]
+S79S                 [current size - 1]
+E38S                 [if(current size) == +]
+T0S                  [acc = 0]                                        [END LOOP]
+A84S                 [range]
+T85S                 [current size = range; acc = 0]
+A86S                 [start num]
+T81S                 [index = start num; acc = 0]
+A86S                 [start num]
+L0L                  [cдвигаем влево значение в acc]
+A78S                 [записываем функцию в acc]
+T71S                 [записываем функцию в ячейку; acc = 0]
+A82S                 [записали current element в acc]
+T0S                  [переписали первое значение в массиве из current element; acc = 0]
+A80S                 [delta]
+S79S                 [delta - 1]
+U80S                 [delta = delta - 1; acc = delta]
+S79S                 [delta - 1]
+E38S                 [if(delta) == +]
+[contstant]    A0S     [fun1]
+               T0S     [fun2]
+               P0L     [1]
+               P1S     [количество разрядов, на которое нужно сдвинуть] [delta]
+               P0S     [указатель индекса, на котором находимся]        [index]
+               P0S     [место хранения для последнего элемента]         [current element]
+               P0S     [предыдущий эелемент]                            [prev element]
+               P2L     [размер массива]                                 [range]
+               P0S     [счетчик тек. массива]                           [current size]
+               P43L    [номер ячейки первого значения в массиве]        [start num]
+[Array]        P0L     [массив и его элементы]        [1]
+               P1S                                    [2]
+               P1L                                    [3]
+               P2S                                    [4]
+               P2L                                    [5]
+
+
